@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Perfil do Aluno</title>
+</head>
+<body class="profile-page">
+    
+    <header class="profile_professional_header">
+        
+        <div class="profile_professional_banner">
+            <img src="../assets/profile_img.jpg" class="img-fluid profile_img" alt="" >
+            <p class="text-center profile_student">Perfil do Aluno</p>
+        </div>
+        <img src="../assets/list.svg" onclick="List.open()"  class="list-icon" alt="">
+        <div class="menu" id="list-overlay">
+            <ul class="list-group">
+                <a href="./editStudentProfile.html" class="cancel"><li class="list-group-item">Editar Perfil</li></a>
+                <li class="list-group-item">Notificações</li>
+                <li class="list-group-item">Termos e Condições</li>
+                <a href="../pages/home_page.html" class="cancel"><li class="btn btn-danger list-group cancel">Sair</li></a>
+            </ul>
+        </div>
+    </header>
+
+        <main onclick="List.close()">
+            <div class="profile_image">
+                <img src="../assets/profile_img_aluno.jpg" class="img-fluid mx-auto d-block img_profile" alt="">
+                <h3 class="text-center username">Linda Martin</h3>
+            </div>
+            <div class="User_profissional">
+                <p class="text-center professores">Personal Trainer: Johnson Rock</p>
+                <p class="text-center professores">Nutrionista: Daniela Santos</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 card-content">
+                        <img src="../assets/treino.jpg" class="img-fluid card-img" alt="">
+                        <p class="text-center card-description">Plano de Treino</p>
+                    </div>
+                    <div class="col-3 card-content">
+                        <img src="../assets/dieta.jpg" class="img-fluid card-img" alt="">
+                        <p class="text-center card-description">Dieta</p>
+                    </div>
+                    <div class="col-3 card-content">
+                        <img src="../assets/aulas.jpeg" class="img-fluid card-img" alt="">
+                        <p class="text-center card-description">Vídeo Aulas</p>
+                    </div>
+                    <div class="col-3 card-content">
+                        <img src="../assets/calendar3.svg"  class="img-fluid card-img" alt="Calendário">
+                        <p class="text-center card-description">Agenda de Atividades</p>
+                    </div>
+                    <div class="col-3 card-content">
+                        <img src="../assets/relatoria_personaç.jpg" class="img-fluid card-img" alt="">
+                        <p class="text-center card-description">Relatório do(a) Personal Trainer</p>
+                    </div>
+                    <div class="col-3 card-content">
+                        <img src="../assets/nutricao.jpg" class="img-fluid card-img" alt="">
+                        <p class="text-center card-description">Relatório da(o) Nutricionista</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--<footer>
+            <div class="text-center arrow_back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="220" height="40" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+            </div>
+        </footer>-->
+
+        <script>
+            const list = document.querySelector('#list-overlay')
+
+            const List = {
+                open(){
+                    list.classList.add("active")
+                },
+                close(){
+                    list.classList.remove("active")
+                }
+            }
+        </script>
+</body>
+</html>

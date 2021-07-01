@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Start Fitness</title>
+</head>
+
+<body class="img-back-home-page">
+  <div class="text-center">
+    <div class="col-12">
+      <img class="text-center" src="../assets/logo_start_fitness_edited.png" alt="">
+    </div>
+  </div>
+  <div class="container-sm">
+
+    <div class="form-row text-center button">
+      <button type="submit" class="btn btn-primary enter" value="Entrar" data-toggle="modal"
+        data-target="#myModal2">Entrar</button>
+    </div>
+    <div class="form-row text-center button2">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary enter" data-toggle="modal" data-target="#myModal">Criar uma
+          conta</button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login Aluno</h4>
+          </div>
+          <div class="modal-body">
+            <a href="./Student_signup.html"><button class="modal-button">Cadastro Aluno</button></a>
+            <a href="./Profissional_signup.html"><button class="modal-button">Cadastro Profissional</button></a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal2" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="col-xs-6">
+              <h4 href="#" class="active text-center register-form-link2" id="login-form-link">Login Aluno</h4>
+            </div>
+            <div class="col-xs-6">
+              <h4 href="#" id="register-form-link" class="register-form-link">Login Profissional</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form id="login-form" action="" method="post" role="form" style="display: block;">
+              <div class="form-group">
+                <input type="text" name="username" id="username" tabindex="1" class="form-control"
+                  placeholder="Email ou Nome de Usuário" value="Linda Martin">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" id="password" tabindex="2" class="form-control"
+                  placeholder="Senha" value="123456">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="text-center">
+                    <a href="./studentProfile.html" class="btn btn-primary enter">Entrar</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <form id="register-form" action="" method="post" role="form" style="display: none;">
+
+              <div class="form-group">
+                <input type="text" name="email" id="email" tabindex="1" class="form-control"
+                  placeholder="Email ou Nome de Usuári" value="Johnson Rock">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" id="password" tabindex="2" class="form-control"
+                  placeholder="Senha" value="929292992">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="text-center">
+                    <a href="./ProfissionalProfile.html" class="btn btn-primary enter">Entrar</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+  </div>
+
+  </div>
+
+
+  <script>
+    $(function () {
+
+      $('#login-form-link').click(function (e) {
+        $("#login-form").delay(100).fadeIn(100);
+        $("#register-form").fadeOut(100);
+        $('#register-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+      $('#register-form-link').click(function (e) {
+        $("#register-form").delay(100).fadeIn(100);
+        $("#login-form").fadeOut(100);
+        $('#login-form-link').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+      });
+
+    });
+
+
+  </script>
+</body>
+
+</html>
